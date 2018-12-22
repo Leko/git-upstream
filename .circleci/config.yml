@@ -23,8 +23,12 @@ jobs:
           paths:
             - node_modules
           key: v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-{{ checksum "package-lock.json" }}
-      - run: git@github.com:Leko/node.git
-      - run: cd node && node ../index.js
+      - run: git clone --depth=1 git@github.com:Leko/node.git
+      - run: cd node && node ../index.js --help
+      - run: cd node && node ../index.js --set
+      - run: cd node && node ../index.js --set -f
+      - run: cd node && node ../index.js --set -f --https
+      - run: cd node && node ../index.js --set -f --no-shallow
   node-latest:
     <<: *base
     docker:
