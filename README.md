@@ -28,3 +28,23 @@ Examples:
   npx git-upstream --set --https       Set https://...
   npx git-upstream --set --no-shallow  For deep nested fork
 ```
+
+
+## Contribution
+
+1. Fork this repository
+1. Write your code
+1. Run tests
+1. Create pull request to master branch
+
+## Development
+
+```
+git clone git@github.com:Leko/git-upstream.git
+cd git-upstream
+npm i
+```
+
+## License
+
+This package under [MIT](https://opensource.org/licenses/MIT) license.
