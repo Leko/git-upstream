@@ -1,5 +1,5 @@
 # git-upstream
-[![CircleCI](https://circleci.com/gh/Leko/git-upstream.svg?style=svg)](https://circleci.com/gh/Leko/git-upstream)
+[![CircleCI](https://circleci.com/gh/Leko/git-upstream.svg?style=svg)](https://circleci.com/gh/Leko/git-upstream) [![Greenkeeper badge](https://badges.greenkeeper.io/Leko/git-upstream.svg)](https://greenkeeper.io/)
 ![](https://img.shields.io/npm/v/git-upstream.svg)
 ![](https://img.shields.io/npm/dm/git-upstream.svg)
 ![](https://img.shields.io/npm/l/git-upstream.svg)
