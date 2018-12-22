@@ -53,10 +53,11 @@ const main = async options => {
     if (!response.yes) {
       return "Canceled";
     }
+
+    await git.removeRemote(UPSTREAM);
   }
 
   return git
-    .removeRemote(UPSTREAM)
     .then(() => git.addRemote(UPSTREAM, upstreamUrl))
     .then(() => `Add ${UPSTREAM} to a remote`);
 };
