@@ -58,7 +58,7 @@ const main = async options => {
   }
 
   return git
-    .then(() => git.addRemote(UPSTREAM, upstreamUrl))
+    .addRemote(UPSTREAM, upstreamUrl)
     .then(() => `Add ${UPSTREAM} to a remote`);
 };
 
