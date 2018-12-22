@@ -59,4 +59,4 @@ jobs:
       - restore_cache:
           keys:
             - v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-{{ checksum "package-lock.json" }}
-      - run: npm run semantic-release || true
+      - run: npx semantic-release
