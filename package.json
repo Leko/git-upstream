@@ -6,11 +6,12 @@
     "git-upstream": "index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Leko/git-upstream.git"
+    "url": "https://github.com/Leko/git-upstream.git"
   },
   "keywords": [
     "cli",
@@ -33,5 +34,8 @@
     "remote-origin-url": "^2.0.0",
     "simple-git": "^1.107.0",
     "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "semantic-release": "^15.13.1"
   }
 }
