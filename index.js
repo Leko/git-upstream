@@ -43,15 +43,17 @@ const main = async options => {
 
   const remotes = await git.getRemotes();
   const hasUpstream = remotes.some(({ name }) => name === UPSTREAM);
-  if (hasUpstream && !options.force) {
-    const response = await prompt({
-      type: "confirm",
-      name: "yes",
-      message: `${UPSTREAM} already exists. Do you want to overwrite?`
-    });
+  if (hasUpstream) {
+    if (!options.force) {
+      const response = await prompt({
+        type: "confirm",
+        name: "yes",
+        message: `${UPSTREAM} already exists. Do you want to overwrite?`
+      });
 
-    if (!response.yes) {
-      return "Canceled";
+      if (!response.yes) {
+        return "Canceled";
+      }
     }
 
     await git.removeRemote(UPSTREAM);
