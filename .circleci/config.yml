@@ -38,9 +38,6 @@ jobs:
       - run: cd node && node ../index.js --set -f --https
       - run: cd node && node ../index.js --set -f --no-shallow
       - run: rm -rf node # clean up
-      - persist_to_workspace:
-          root: ~/repo
-          paths: .
   node-latest:
     <<: *base
     docker:
@@ -58,6 +55,8 @@ jobs:
     docker:
       - image: node:10
     steps:
-      - attach_workspace:
-          at: ~/repo
+      - checkout
+      - restore_cache:
+          keys:
+            - v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-{{ checksum "package-lock.json" }}
       - run: npm run semantic-release || true
