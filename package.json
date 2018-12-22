@@ -1,0 +1,27 @@
+{
+  "name": "git-upstream",
+  "version": "0.1.0",
+  "description": "Utility to set the remote \"upstream\" on forked repository",
+  "bin": {
+    "git-upstream": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Leko/git-upstream.git"
+  },
+  "keywords": [
+    "cli",
+    "git",
+    "remote",
+    "upstream"
+  ],
+  "author": "Leko <leko.noor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Leko/git-upstream/issues"
+  },
+  "homepage": "https://github.com/Leko/git-upstream#readme"
+}
