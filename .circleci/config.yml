@@ -5,6 +5,14 @@ workflows:
       - node-v8
       - node-v10
       - node-latest
+      - deploy:
+          filters:
+            branches:
+              only: master
+          requires:
+            - node-v8
+            - node-v10
+            - node-latest
 
 version: 2
 jobs:
@@ -29,6 +37,10 @@ jobs:
       - run: cd node && node ../index.js --set -f
       - run: cd node && node ../index.js --set -f --https
       - run: cd node && node ../index.js --set -f --no-shallow
+      - run: rm -rf node # clean up
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
   node-latest:
     <<: *base
     docker:
@@ -41,3 +53,12 @@ jobs:
     <<: *base
     docker:
       - image: node:10
+  deploy:
+    <<: *base
+    docker:
+      - image: node:10
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/repo
+      - run: npm run semantic-release || true
