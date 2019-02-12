@@ -32,7 +32,7 @@
     "lodash": "^4.17.11",
     "remote-origin-url": "^2.0.0",
     "simple-git": "^1.107.0",
-    "yargs": "^12.0.5"
+    "yargs": "^13.1.0"
   },
   "devDependencies": {
     "semantic-release": "^15.13.1"
