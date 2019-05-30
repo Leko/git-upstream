@@ -4,6 +4,7 @@ workflows:
     jobs:
       - node-v8
       - node-v10
+      - node-v12
       - node-latest
       - deploy:
           filters:
@@ -12,6 +13,7 @@ workflows:
           requires:
             - node-v8
             - node-v10
+            - node-v12
             - node-latest
 
 version: 2
@@ -50,6 +52,10 @@ jobs:
     <<: *base
     docker:
       - image: node:10
+  node-v12:
+    <<: *base
+    docker:
+      - image: node:12
   deploy:
     <<: *base
     docker:

@@ -25,16 +25,16 @@
   },
   "homepage": "https://github.com/Leko/git-upstream#readme",
   "dependencies": {
-    "@octokit/rest": "^16.3.0",
+    "@octokit/rest": "^16.27.1",
     "chalk": "^2.4.1",
     "enquirer": "^2.2.0",
     "git-url-parse": "^11.1.1",
     "lodash": "^4.17.11",
     "remote-origin-url": "^2.0.0",
     "simple-git": "^1.107.0",
-    "yargs": "^13.1.0"
+    "yargs": "^13.2.4"
   },
   "devDependencies": {
-    "semantic-release": "^15.13.1"
+    "semantic-release": "^15.13.14"
   }
 }
