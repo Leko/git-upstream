@@ -5,7 +5,7 @@ describe("E2E", () => {
     const {
       status,
       output: [, , stderr]
-    } = spawnSync("node", ["../index.js", "--help"], { encoding: "utf8" });
+    } = spawnSync("node", ["../src/index.js", "--help"], { encoding: "utf8" });
     expect(stderr).toBe("");
     expect(status).toBe(0);
   });
@@ -13,7 +13,7 @@ describe("E2E", () => {
     const {
       status,
       output: [, , stderr]
-    } = spawnSync("node", ["../index.js", "--set"], { encoding: "utf8" });
+    } = spawnSync("node", ["../src/index.js", "--set"], { encoding: "utf8" });
     expect(stderr).toBe("");
     expect(status).toBe(0);
   });
@@ -21,7 +21,7 @@ describe("E2E", () => {
     const {
       status,
       output: [, , stderr]
-    } = spawnSync("node", ["../index.js", "--set", "-f"], { encoding: "utf8" });
+    } = spawnSync("node", ["../src/index.js", "--set", "-f"], { encoding: "utf8" });
     expect(stderr).toBe("");
     expect(status).toBe(0);
   });
@@ -29,7 +29,7 @@ describe("E2E", () => {
     const {
       status,
       output: [, , stderr]
-    } = spawnSync("node", ["../index.js", "--set", "-f", "--https"], {
+    } = spawnSync("node", ["../src/index.js", "--set", "-f", "--https"], {
       encoding: "utf8"
     });
     expect(stderr).toBe("");
@@ -39,7 +39,7 @@ describe("E2E", () => {
     const {
       status,
       output: [, , stderr]
-    } = spawnSync("node", ["../index.js", "--set", "-f", "--no-shallow"], {
+    } = spawnSync("node", ["../src/index.js", "--set", "-f", "--no-shallow"], {
       encoding: "utf8"
     });
     expect(stderr).toBe("");
