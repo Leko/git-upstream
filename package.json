@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "description": "Utility to set the remote \"upstream\" on forked repository",
   "bin": {
-    "git-upstream": "index.js"
+    "git-upstream": "src/index.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint './{src,__tests__}/**/*.js'"
   },
   "repository": "Leko/git-upstream",
   "keywords": [
@@ -28,7 +29,9 @@
     "yargs": "^15.0.1"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
     "jest": "^24.9.0",
+    "prettier": "^1.19.1",
     "semantic-release": "^15.14.0"
   }
 }
