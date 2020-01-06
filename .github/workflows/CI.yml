@@ -1,0 +1,26 @@
+name: CI
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        node-version: ["13.x", "12.x", "10.x"]
+    steps:
+      - uses: actions/checkout@master
+      - name: Checkout Leko/node(forked) repository
+        uses: actions/checkout@master
+        with:
+          repository: Leko/node
+          path: node
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
+      - run: npm ci
+      - run: cd node && ../node_modules/.bin/jest ../__tests__
+      - run: rm -rf node # clean up
