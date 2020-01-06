@@ -8,10 +8,7 @@
   "scripts": {
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Leko/git-upstream.git"
-  },
+  "repository": "Leko/git-upstream",
   "keywords": [
     "cli",
     "git",
@@ -20,10 +17,6 @@
   ],
   "author": "Leko <leko.noor@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Leko/git-upstream/issues"
-  },
-  "homepage": "https://github.com/Leko/git-upstream#readme",
   "dependencies": {
     "@octokit/rest": "^16.27.1",
     "chalk": "^3.0.0",
