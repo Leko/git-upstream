@@ -21,7 +21,6 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
-      - run: npm i -g c8
       - run: npm ci
-      - run: cd node && c8 ../node_modules/.bin/jest ../__tests__
+      - run: cd node && ../node_modules/.bin/jest ../__tests__
       - run: rm -rf node # clean up
