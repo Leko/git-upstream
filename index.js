@@ -103,12 +103,7 @@ const argv = yargs
   .example("npx $0 --set --no-shallow", "For deep nested fork").argv;
 
 main(argv)
-  .then(
-    flow(
-      chalk.cyan,
-      console.log
-    )
-  )
+  .then(flow(chalk.cyan, console.log))
   .catch(
     flow(
       error => error.message,
