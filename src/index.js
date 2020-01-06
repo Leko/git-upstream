@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 const chalk = require("chalk");
-const tap = require("lodash/tap");
 const flow = require("lodash/flow");
 const yargs = require("yargs");
 const git = require("simple-git/promise")();
