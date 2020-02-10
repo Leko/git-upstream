@@ -4,9 +4,10 @@ const flow = require("lodash/flow");
 const yargs = require("yargs");
 const git = require("simple-git/promise")();
 const { prompt } = require("enquirer");
-const octokit = require("@octokit/rest")();
+const { Octokit } = require("@octokit/rest");
 const getOriginUrl = require("remote-origin-url");
 const parseGitUrl = require("git-url-parse");
+const octokit = new Octokit();
 
 const UPSTREAM = "upstream";
 
