@@ -1,6 +1,6 @@
 {
   "name": "git-upstream",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utility to set the remote \"upstream\" on forked repository",
   "bin": {
     "git-upstream": "src/index.js"
