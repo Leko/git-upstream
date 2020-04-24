@@ -19,7 +19,7 @@
   "author": "Leko <leko.noor@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@octokit/rest": "16.43.1",
+    "@octokit/rest": "17.6.0",
     "chalk": "^3.0.0",
     "enquirer": "^2.2.0",
     "git-url-parse": "^11.1.1",
